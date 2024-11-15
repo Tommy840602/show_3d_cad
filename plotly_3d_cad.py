@@ -4,6 +4,7 @@ from dash.dependencies import Input, Output
 import plotly.graph_objs as go
 import numpy as np
 import trimesh
+import gunicorn
 
 # 讀取 .stl 文件
 mesh = trimesh.load_mesh('/Users/huangyanwei/python training/show_3d/All.stl')
@@ -14,6 +15,8 @@ faces = mesh.faces
 
 # 定義 Dash app
 app = dash.Dash(__name__)
+
+server = app.server
 
 app.layout = html.Div([
     dcc.Graph(id='3d-graph'),
