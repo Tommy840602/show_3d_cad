@@ -7,7 +7,7 @@ import trimesh
 import gunicorn
 
 # 讀取 .stl 文件
-mesh = trimesh.load_mesh('/Users/huangyanwei/python training/show_3d/All.stl')
+mesh = trimesh.load_mesh('https://github.com/Tommy840602/show_3d_cad/blob/main/All.stl')
 
 # 將 mesh 頂點和面提取出來
 vertices = mesh.vertices
